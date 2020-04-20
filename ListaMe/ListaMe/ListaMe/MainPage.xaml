@@ -6,11 +6,57 @@
              mc:Ignorable="d"
              x:Class="ListaMe.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid VerticalOptions="FillAndExpand"
+          Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    
+        <Image Source="drawable/LogoListame.png"
+               Margin="1"
+               Grid.Row="0"
+               Grid.RowSpan="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="5"
+               />
+
+        <Button x:Name="btnLogin" 
+               Clicked="btnLogin_Clicked"
+               CornerRadius="40"
+               BackgroundColor="#008046"
+               TextColor="White" 
+               Text="Crear Conferencia"
+               Margin="15"
+               Grid.Row="3"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"
+                />
+
+
+        <Button x:Name="btnRegistro" 
+               Clicked="btnRegistro_Clicked"
+               CornerRadius="40"
+               BackgroundColor="Purple"
+               TextColor="White" 
+               Text="Registrarme"
+               Margin="15"
+               Grid.Row="4"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"
+                />
+    </Grid>
 
 </ContentPage>

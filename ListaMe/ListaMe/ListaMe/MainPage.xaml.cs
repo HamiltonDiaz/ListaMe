@@ -17,5 +17,16 @@ namespace ListaMe
         {
             InitializeComponent();
         }
-    }
+
+        private void btnRegistro_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegistroPage());
+        }
+
+        private void btnLogin_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginPage());
+        }
+    };
 }
+

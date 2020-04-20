@@ -130,6 +130,10 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="drawable\facebook.png" />
+    <Content Include="drawable\instagram.png" />
+    <Content Include="drawable\LogoListame.png" />
+    <Content Include="drawable\whatsapp.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -143,8 +147,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Net.Http">
+      <Version>2.2.29</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9"/>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
   <ItemGroup>

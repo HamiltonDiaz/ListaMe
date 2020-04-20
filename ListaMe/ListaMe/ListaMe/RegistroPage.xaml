@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ListaMe.RegistroPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand"
+          Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Picker x:Name="fk_conferencias"
+                    Title="Seleccione Conferencia"
+                    TitleColor="Purple"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4">
+      
+            </Picker>
+ 
+            <Entry x:Name="num_doc" 
+                    Placeholder="Numero de documento"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                   />
+            <Entry x:Name="nombre" 
+                   Placeholder="Nombre Completo"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                   />
+            <Entry x:Name="email" 
+                   Placeholder="Email"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                   />
+            
+            <Entry x:Name="telefono" 
+                   Placeholder="Teléfono"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                   />
+            <Entry x:Name="empresa" 
+                   Placeholder="Empresa"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                   />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
