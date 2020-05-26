@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
              mc:Ignorable="d"
-             x:Class="ListaMe.LoginPage">
+             x:Class="ListaMe.View.HomePage">
     <ContentPage.Content>
         <Grid VerticalOptions="FillAndExpand"
-          Margin="10">
+          Margin="10" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -25,48 +26,38 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Entry Placeholder="Usuario"
-               PlaceholderColor="Purple"
-               x:Name="usuario"
-               Grid.Row="1"
-               Grid.Column="1"
-               Grid.ColumnSpan="3"
-               />
-            <Entry Placeholder="Constraseña"
-               PlaceholderColor="Purple"
-               IsPassword="True"
-               x:Name="contra"
-               Grid.Row="2"
-               Grid.Column="1"
-               Grid.ColumnSpan="3"
+            <Image Source="drawable/LogoListame.png"
+               Margin="1"
+               Grid.Row="0"
+               Grid.RowSpan="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="5"
                />
 
-            <Button x:Name="btnLogin" 
+            <Button x:Name="btnConferencias" 
+               Clicked="btnConferencias_Clicked"
                CornerRadius="40"
-               BackgroundColor="Purple"
+               BackgroundColor="#008046"
                TextColor="White" 
-               Text="Ingresar"
+               Text="Conferencias"
                Margin="15"
                Grid.Row="3"
                Grid.Column="1"
                Grid.ColumnSpan="3"
                 />
 
-            <Image Source="drawable/instagram.png"
-               Margin="5"
+
+            <Button x:Name="btnRegistro" 
+               Clicked="btnRegistro_Clicked"
+               CornerRadius="40"
+               BackgroundColor="Purple"
+               TextColor="White" 
+               Text="ListarMe"
+               Margin="15"
                Grid.Row="4"
                Grid.Column="1"
-               />
-            <Image Source="drawable/whatsapp.png"
-               Margin="5"
-               Grid.Row="4"
-               Grid.Column="2"
-               />
-            <Image Source="drawable/facebook.png"
-               Margin="5"
-               Grid.Row="4"
-               Grid.Column="3"
-               />
+               Grid.ColumnSpan="3"
+                />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

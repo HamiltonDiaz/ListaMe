@@ -130,8 +130,10 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="drawable\agregar.png" />
     <Content Include="drawable\facebook.png" />
     <Content Include="drawable\instagram.png" />
+    <Content Include="drawable\lista.png" />
     <Content Include="drawable\LogoListame.png" />
     <Content Include="drawable\whatsapp.png" />
     <Content Include="Properties\Default.rd.xml" />

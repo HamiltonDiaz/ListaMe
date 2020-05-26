@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ListaMe.View.CrearConferenciaPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" Margin="10" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Crear Conferencia"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="6"
+                   TextColor="Purple"
+                   FontSize="Large"   
+                   HorizontalTextAlignment="Center"
+                   />
+            
+            <Image Source="drawable/agregar.png"
+               Margin="1"
+               Grid.Row="1"
+               Grid.RowSpan="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="6"
+               />
+            
+            <Entry 
+                    Placeholder="Nombre Conferencia"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                    Text="{Binding nombre}"
+                   />
+           
+            <Button 
+               CornerRadius="20"
+               BackgroundColor="DarkGreen"
+               TextColor="White" 
+               Text="Crear"
+               Margin="15"
+               Grid.Row="5"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Command="{Binding CrearCommand}"
+                />
+
+            <Button 
+               CornerRadius="20"
+               BackgroundColor="OrangeRed"
+               TextColor="White" 
+               Text="Volver"
+               Margin="15"
+               Grid.Row="5"
+               Grid.Column="3"
+               Grid.ColumnSpan="2"
+               Clicked="Volver_Clicked"
+                />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

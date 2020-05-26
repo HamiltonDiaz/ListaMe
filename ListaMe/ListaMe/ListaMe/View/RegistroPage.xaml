@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
              mc:Ignorable="d"
-             x:Class="ListaMe.RegistroPage">
+             x:Class="ListaMe.View.RegistroPage">
     <ContentPage.Content>
-        <Grid VerticalOptions="FillAndExpand"
-          Margin="10">
+
+        <Grid VerticalOptions="FillAndExpand" Margin="10" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -27,47 +28,78 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Picker x:Name="fk_conferencias"
+            <Picker 
+                    x:Name="Confer"
+                    ItemsSource="{Binding Conferencia}"
+                    ItemDisplayBinding="{Binding conferencia}"
+                    SelectedItem="{Binding SelectedRegistro}"
                     Title="Seleccione Conferencia"
                     TitleColor="Purple"
                     Grid.Row="0"
                     Grid.Column="1"
                     Grid.ColumnSpan="4">
-      
             </Picker>
- 
-            <Entry x:Name="num_doc" 
+      
+
+            <Entry 
                     Placeholder="Numero de documento"
                     Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
+                   Text="{Binding Listarme.num_doc}"
                    />
-            <Entry x:Name="nombre" 
+            <Entry 
                    Placeholder="Nombre Completo"
                     Grid.Row="2"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
+                   Text="{Binding Listarme.nombre}"
                    />
-            <Entry x:Name="email" 
+            <Entry 
                    Placeholder="Email"
                     Grid.Row="3"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
+                   Text="{Binding Listarme.email}"
                    />
-            
-            <Entry x:Name="telefono" 
+
+            <Entry 
                    Placeholder="Teléfono"
                     Grid.Row="4"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
+                   Text="{Binding Listarme.telefono}"
                    />
-            <Entry x:Name="empresa" 
+            <Entry 
                    Placeholder="Empresa"
                     Grid.Row="5"
                     Grid.Column="1"
                     Grid.ColumnSpan="4"
+                   Text="{Binding Listarme.empresa}"
                    />
+            <Button 
+               CornerRadius="20"
+               BackgroundColor="Purple"
+               TextColor="White" 
+               Text="ListarMe"
+               Margin="15"
+               Grid.Row="6"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Command="{Binding RegistroCommand}"
+                />
 
+            <Button 
+               CornerRadius="20"
+               BackgroundColor="OrangeRed"
+               TextColor="White" 
+               Text="Volver"
+               Margin="15"
+               Grid.Row="6"
+               Grid.Column="3"
+               Grid.ColumnSpan="2"
+               Clicked="Volver_Clicked"
+                />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
